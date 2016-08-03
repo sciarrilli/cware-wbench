@@ -77,12 +77,12 @@
   args:
     chdir: /home/vagrant/ansible-2.0.1.0
 
-- name: create ansible symlinks
-  file: src=/usr/local/bin/{{ item }} dest=/usr/bin/{{ item }} state=link
-  with_items:
-    - ansible
-    - ansible-playbook
-    - ansible-doc
+#- name: create ansible symlinks
+#  file: src=/usr/local/bin/{{ item }} dest=/usr/bin/{{ item }} state=link
+#  with_items:
+#    - ansible
+#    - ansible-playbook
+#    - ansible-doc
 
 - name: remove ansible directory
   file: path=/home/vagrant/ansible-2.0.1.0 state=absent
